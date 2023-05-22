@@ -1,0 +1,580 @@
+Funcion ejercicio1()
+	//video 21
+	definir a, b, resultado como entero
+	a<-10
+	escribir "digite un numero"
+	leer b
+	
+	//sumamos a y b, y el resultado lo almacenamos
+	resultado <- a+b
+	
+	escribir "el resultado es: ",resultado
+FinFuncion
+funcion ejercicio2()
+	//video 22
+	definir seg, hor, min Como entero
+	definir horas_seg, minutos_seg, segundos_totales como entero
+	
+	escribir "ingrese la cantidad de horas"
+	leer hor;
+	escribir "ingrese la cantidad de minutos"
+	leer min;
+	escribir "ingrese la cantidad de segundos"
+	leer seg;
+	
+	//calcular el equivalente en segundos
+	horas_seg = hor * 3600;
+	minutos_seg = min * 60;
+	
+	segundos_totales =  horas_seg + minutos_seg + seg;
+	
+	escribir "los segundos equivalentes son: ",segundos_totales
+FinFuncion
+Funcion ejercicio3()
+	// video 23
+	definir radio,area,lon como real;
+	escribir "digite el valor del radio:"
+	leer radio
+	area <- pi * radio^2
+	lon = 2 * pi * radio
+	
+	escribir "el area de la circunferencia es: ",area
+	escribir "la longitud es: ", lon
+FinFuncion
+funcion ejercicio4()
+	//video 24
+	definir num_hombres, num_mujeres como entero
+	definir total_estudiantes como entero
+	definir porcentajeH, porcentajeM Como real
+	
+	escribir "digite el numero de hombres"
+	leer num_hombres
+	escribir "digite el numero de mujeres"
+	leer num_mujeres
+	
+	total_estudiantes = num_hombres + num_mujeres
+	porcentajeH = num_hombres / total_estudiantes * 100
+	porcentajeM = num_mujeres / total_estudiantes * 100
+	
+	escribir "el porcentaje de hombres es: ",porcentajeH "%"
+	escribir "el porcentaje de mujeres es: ",porcentajeM "%"
+FinFuncion
+funcion ejercicio5()
+	//video 25
+	definir cantidadA,cantidadB,cantidadC como entero
+	definir tiempoA,tiempoB,tiempoC Como entero;
+	definir tiempo_total Como Entero
+	definir horas, minutos Como Real
+	
+	escribir "digite la cantidad de examenes A:"
+	leer cantidadA
+	escribir "digite la cantidad de examenes B:"
+	leer cantidadB
+	escribir "digite la cantidad de examenes C:"
+	leer cantidadC
+	
+	//calcular los minutos que se tarda por cada cuestionario
+	tiempoA <- cantidadA * 5
+	tiempoB <- cantidadB * 5
+	tiempoC <- cantidadC * 5
+	
+	//calculamos los minutos que se tarda en revisar los 
+	//cuestionarios a,b,c
+	tiempo_total = tiempoA + tiempoB + tiempoC
+	
+	//calculamos las horas y minutos
+	horas = trunc(tiempo_total / 60)
+	minutos = tiempo_total mod 60
+	
+	escribir "se demorara ",horas,"horas y ",minutos,"minutos";	
+FinFuncion
+funcion ejercicio6()
+	//video 26
+	definir descuento, total_a_pagar, compra Como real
+	
+	escribir "digite el precio de la compra"
+	Leer compra
+	
+	descuento <- compra * 0.15
+	total_a_pagar = compra - descuento
+	
+	escribir "el valor a pagar con descuento incluido es: ", total
+	
+FinFuncion
+funcion ejercicio7()
+	//ejercicio 27 correjido
+	//ultimo ejercicio/video de estructuras secuenciales
+	definir parcial1, parcial2, parcial3, promedioP, notaP como real
+	definir examenFinal, notaExamen como real
+	definir trabajoF, notaTrabajoF como real
+	definir calificacionFinal como real
+	escribir "digite las notas del los 3 parciales"
+	escribir "parcial 1:"
+	leer parcial1
+	escribir "parcial 2:"
+	leer parcial2
+	escribir "parcial 3:"
+	leer parcial3
+	
+	promedioP<-trunc(parcial1 + parcial2 + parcial3)/3  
+	//notas divididas entre 3 
+	//escribir "la nota del promedio parcial es: ",promedioP
+	
+	//porcentaje de la nota (55%)
+	notaP <- promedioP * 0.55
+	escribir "el porcentaje es de: ",notaP,"%"," sobre 55%";
+	
+	// notas del examen final
+	escribir "digite la nota del examen final"
+	leer examenFinal
+	notaExamen <- examenFinal * 0.30
+	Escribir "porcentaje de la nota del examen final es del: ",notaExamen,"%"," sobre 30%"; 
+	
+	//nota del trabajo final
+	escribir "digite la nota del trabajo final:";
+	leer trabajoF
+	notaTrabajoF <- trabajoF*0.15
+	escribir "el porcentaje de la nota del trabajo final es del: ",trabajoF,"%"," sobre 15%";
+	
+	//nota total de las 3 secciones
+	//escribir el porv?centaje y nota final
+	//equivalente al 100% de la nota xdxd 
+	calificacionFinal <- notaP + notaExamen + trabajoF //mod 3;
+	escribir "el promedio de la calificacion equivalente a las 3 areas es: ",calificacionFinal,"% sobre 100";
+	escribir "joder que buen algoritmo xdxd :)"
+FinFuncion
+funcion ejercicio8_9()
+	// video 28 //introduccion condicionales //video 29
+	//numero par o impar
+	//= num /2 
+	//si da 0 par
+	//si da 1 impar
+	//     trunc = /  ej 2/2=1
+	//     mod   = %  ej 2%2=0
+	
+	definir num1 Como Entero
+	leer num1
+	
+	si num1 mod 2 = 0 entonces; //%
+		escribir num1," es par";
+	SiNo
+		escribir num1," no es par";
+	FinSi
+FinFuncion
+funcion ejercicio10()
+	//video 30 condicionales
+	//determinar si un alunmo reprueba o no
+	//nota debe ser mayor a 70
+	
+	definir nota1, nota2, nota3, notaTotal Como Real;
+	definir notaFinal Como Real
+	escribir "digite las 3 notas:"
+	leer nota1
+	leer nota2
+	leer nota3
+	
+	notaTotal <- (nota1 + nota2 + nota3)/3;
+	//escribir notaTotal
+	notaFinal = trunc(notaTotal);
+	//escribir "promedio: ",notaFinal,"%"
+	si notaFinal >= 70 Entonces
+		escribir "aprobado felicidades"
+	sino
+		escribir "sorry maestro no llegaste :("
+		//escribir "felicidades nacio homosexual xdxd"
+	FinSi
+FinFuncion
+funcion ejercicio11()
+	//video 31 //condicionales //gg
+	// 20% de descuento en almacen si supera los 100 de compra
+	
+	definir compra, descuento, totalPago Como Real
+	escribir "ingrese el precio de la compra"
+	leer compra
+	
+	si compra >= 100 Entonces
+		descuento = compra * 0.20
+		//escribir descuento
+		totalPago = compra - descuento
+		//escribir totalPago
+		escribir "el valor de la compra: ",compra," con descuento: ",totalPago; 
+	SiNo
+		escribir "el valor del produto sin descuento es: ",compra
+	FinSi
+FinFuncion
+funcion ejercicio12()
+	//video 32 //condicionales
+	//ejercicio  12
+	//leer 2 numeros 
+	//si son iguales    = *
+	//sino num1 es > num2 = -
+	//sino num1 es < num2 = +
+	
+	definir num1, num2, mult, siu, res Como Entero
+	
+	escribir "ingrese el valor 1:"
+	leer num1
+	escribir "ingrese el valor 2:"
+	leer num2
+	
+	si num1 = num2 Entonces
+		
+		mult = num1 * num2;
+		escribir mult
+		
+	sino
+		si num1 > num2 Entonces
+			
+			res = num1 - num2
+			escribir res
+			
+		sino
+			
+			siu = num1 + num2;
+			escribir siu
+			
+		FinSi	
+	FinSi
+FinFuncion
+funcion ejercicio13()
+	//video 32
+	//condicionales
+	//mayor de 3 numeros
+	definir num1, num2, num3 Como Entero
+	escribir "ingrese el valor 1:"
+	leer num1
+	escribir "ingrese el valor 2:"
+	leer num2
+	escribir "ingrese el valor 3:"
+	leer num3
+	
+	si num1 > num2 Y num1 > num3
+		escribir "el numero ",num1,"es mayor a",num2,"y",num3	
+	sino
+		si num2 > num1 Y num2 > num3
+			escribir "el numero ",num2,"es mayor a",num1,"y",num3	
+		SiNo
+			si num3 > num1 Y num3 > num2
+				escribir "el numero ",num3,"es mayor a",num1,"y",num2
+			SiNo
+				escribir "son iguales xd"
+			FinSi
+		FinSi
+
+	//escribir "son iguales xd"	
+	FinSi
+FinFuncion
+funcion ejercicio14()
+	definir precioK,kilos,precioI como reales
+	definir descuento, precioFinal como reales
+	escribir "cuanto cuesta el kilo de manzanas?:"
+	leer precioK
+	escribir "cuantos kilos de manzana ha comprado?:"
+	leer kilos
+	precioI <- precioK * kilos
+	si kilos >= 0 y kilos <= 2
+		descuento = 0
+	sino
+		si kilos >= 2.1 y kilos <= 5 
+			descuento = precioI * 0.10
+		SiNo
+			si kilos >= 5.1 y kilos <= 10
+				descuento = precioI * 0.15
+			SiNo
+				
+					descuento = precioI * 0.20
+				
+				
+			FinSi
+		FinSi
+	FinSi
+	precioFinal = precioI - descuento
+	escribir "el precio a pagra es: ",precioFinal
+FinFuncion
+Funcion ejercicio15 
+	//video 35
+	//condicionales /con segun
+	definir dia Como Entero
+	escribir "ingrese el numero de dia gg"
+	leer dia
+	Segun dia Hacer
+		opcion_1:
+			escribir "lunes"
+		opcion_2:
+			escribir "martes"
+		opcion_3:
+			escribir "miercoles"
+		opcion_4:
+			escribir "feliz jueves"
+		opcion_5:
+			escribir "viernes"
+		opcion_6:
+			escribir "sabado"
+		opcion_7:
+			escribir "domingo"
+		De Otro Modo:
+			escribir "valor incorrecto"
+	FinSegun
+FinFuncion
+Funcion ejercicio16()
+	//video 36
+	//condicionales
+	//elaborar un programa que muestre el 
+	//significado de los aniversarios
+	definir decada Como Entero
+	escribir "ingrese una decada hasta la 60:"
+	leer decada
+	segun decada Hacer
+		opcion_10:
+			escribir "boda de hojalata"
+		opcion_20:
+			escribir "boda de porcelana"
+		opcion_30:
+			escribir "boda de perlas"
+		opcion_40:
+			escribir "boda de rubi"
+		opcion_50:
+			escribir "boda de oro"
+		opcion_60:
+			escribir "boda de diamante"
+		de otro modo:
+			escribir "decada o numero incorrecto"
+	FinSegun
+FinFuncion
+Funcion ejercicio17
+	//video 37
+	//menu de opciones
+	definir menuPr Como Entero
+	escribir "opcion(1: elevar un numero a una potencia x"
+	escribir "opcion(2: sacar la raiz cuadrada de un numero"
+	escribir "opcion(3: salir"
+	
+	Segun menuPr hacer
+		opcion_1:
+			definir num,pot,resultado como reales
+			escribir "digite un numero: "
+			leer num
+			escribir "digite la potencia: "
+			leer pot
+			resultado = num^pot
+			escribir "el sesulttado es: ",resultado
+		opcion_2:	
+			definir num,resultado como reales
+			escribir "ingrese un numero:"
+			leer num
+			resultado = rc(num)
+			escribir "el resultado es: ",resultado
+		De Otro Modo:
+			escribir "opcion incorrecta"
+	FinSegun	
+FinFuncion
+funcion ejercicio18()
+	//video 38 
+	//ejercicio 0 ciclos
+	//contador
+	Definir cont Como Entero
+	para cont=1 Hasta 11 con paso 1 Hacer
+		escribir cont
+	FinPara
+FinFuncion
+funcion ejercicio19()
+	//video 39
+	//ejercicio 0.1
+	//ciclo con while
+	definir i como entero
+	i=0
+	mientras i < 10 Hacer
+		i = i+1
+		escribir i		
+	FinMientras
+FinFuncion
+funcion ejercicio20()
+	//video 40
+	//calculae cantidad de losn numeros
+	definir n,i,sum como entero
+	escribir "ingrese la cantidad de numeros a sumarse:"
+	leer n
+	
+	Para i=0 hasta n con paso 1 Hacer
+		sum = sum + i
+		escribir sum
+	FinPara
+FinFuncion
+funcion ejercicio21()
+	//video 41
+	//sumar cantidad de numeros  pares e impares de 1 hasta 50
+	definir i, sumaPar, sumaImpar como entero
+	para i=2 hasta 50 con paso 1 Hacer
+		si i%2=0 Entonces
+			sumaPar = sumaPar + i
+		SiNo
+			sumaImpar = sumaImpar + i
+		FinSi
+	FinPara
+	escribir "suma par: ",sumaPar
+	escribir "suma impar: ",sumaImpar
+FinFuncion
+funcion ejericio22()
+	//video 42
+	//leer 10numeros e imprimir cuantos son positivos 
+	//y negativos
+	definir num, contPositivos,contNegativos,contNeutros Como Entero
+	para i=1 hasta 10 con paso 1 Hacer
+		escribir i,"ingrese los numeros a leer"
+		leer num
+		si num = 0 Entonces
+			contNeutros = contNeutros+1
+		SiNo 
+			si num1 > 0 entonces
+				contPositivos = contPositivos+1
+			sino 
+				contNegativos = contNegativos+1
+			FinSi
+		FinSi
+		escribir "los neutros son: ",contNeutros
+		escribir "los positivos son: ",contPositivos
+		escribir "los negativos son: ",contNegativos
+	FinPara
+FinFuncion
+funcion ejercicio23()
+	//video 43
+	//calcular la calificacion pomedio
+	definir i, sum, calificacion Como real
+	definir calificacionPromedio,calificacionMasBaja Como Real
+	calificacionMasBaja = 9999
+	para i=1 hasta 11 con paso 1 Hacer
+		escribir i,"ingrese la calificacion:"
+		leer calificacion
+		sum=sum+calificacion 
+		si calificacion < calificacionMasBaja Entonces
+			calificacionMasBaja <- calificacion 
+		FinSi
+	FinPara
+	escribir "las notas sumadas son",sum
+	calificacionPromedio = trunc(sum)/10 //ojo trunc
+	escribir "la calificacion promedio es: ", calificacionPromedio
+	escribir "la calificacion mas baja es :",calificacionMasBaja
+FinFuncion
+
+funcion ejercicio24()
+	//video 44
+	//factorial
+	definir c,n,facotrial Como Entero
+	c=1
+	escribir "ingrese el numero que desee:"
+	leer n
+	mientras c <= n Hacer
+		factorial = n*c
+		escribir factorial
+		c=c+1
+	FinMientras
+FinFuncion
+
+funcion ejercicio25()
+	//video 45 
+	//calcular sumatoria de n elementos
+	//s = 1+2+3+...n
+	definir v,i,s,n Como Entero
+	escribir "ingrese cuantos valores desea sumar: "
+	leer v
+	mientras i<=v Hacer
+		escribir i,"ingrese los numeros: "
+		leer n
+		s = s+n
+		i= i+1
+	FinMientras
+	escribir "el valor total de la suma es: ",s
+FinFuncion
+
+funcion ejercicio26()
+	//ultimo video
+	//video 46
+	//duma de pares / 
+	//cuantos pares hay/promedio de impares
+	definir v,n,i Como Entero
+	definir sPar, cP,Simpar,proImpar Como Entero
+	escribir "imgrese los n valores: "
+	leer v
+	mientras i<v Hacer
+		escribi i, "ingrese el numero"
+		leer n
+		i = i+1
+		si n%2=0 Entonces
+			sPar = sPar + n
+			cP= cP + 1
+		SiNo
+			sImpar =sImpar +n
+			cImpar =cImpar +1  
+			proImpar = sImpar/cImpar;
+		FinSi
+		
+	FinMientras
+	
+	si sPar = 0 Entonces
+		escribir "no se ha ingresado numero pares "
+	sino 
+		escribir "la suma de los pares es: ",sPar
+		escribir "la cantidad existente de pares es: ",cP
+	FinSi
+	
+	si sImpar = 0
+		escribir "no se ha ingresado valores impares"
+	SiNo
+		escribir "el promedio de los impares es: ",proImpar
+	FinSi
+FinFuncion
+
+
+funcion ejercicio27()
+	//ultimo ejercicio video
+	//R.I.P channel
+	
+	Escribir"Ejercicio 32 pago por horas de los trabajadores"
+	Definir horast, i, hora, salario, acu Como Real 
+	i = 1
+	acu = 0
+	Escribir "Ingrese el valor de pago por hora a los trabajadores"
+	Leer hora
+	Mientras i <= 5 Hacer
+		Escribir "Ingrese las horas trabajadas del trabajador ", i
+		Leer horast
+		salario = hora * horast 
+		Escribir "El salario del trabajador ", i, " es: $", salario, " por día"
+		acu = acu + salario
+		i = i + 1
+	FinMientras
+	Escribir "El salario total de todos los trabajadores es: ", acu, " por día"
+FinFuncion
+  	
+
+Algoritmo poject
+	//ejercicio1()
+	//ejercicio2()
+	//ejercicio3()
+	//ejercicio4()
+	//ejercicio5()
+	//ejercicio6()
+	//ejercicio7()
+	//ejercicio8_9()
+	
+	//ejercicio10()
+	//ejercicio11()
+	//ejercicio12()
+	//ejercicio13()
+	//ejercicio14()
+	//ejercicio15()
+	//ejercicio16()
+	//ejercicio17()
+	//ejercicio18()
+	//ejercicio19()
+	//ejercicio20()
+	//ejercicio21()
+	//ejercicio22()
+	//ejercicio23()
+	//ejercicio24()
+	//ejercicio25()
+	//ejercicio26()
+	ejercicio27()
+	
+	
+FinAlgoritmo
